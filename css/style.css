@@ -1,0 +1,230 @@
+@import url(theme.css);
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Luckiest Guy";
+  color: var(--text-color);
+}
+button {
+  font-family: "Luckiest Guy";
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#startScreen {
+  background-image: var(--bg);
+  background-color: var(--bg-color);
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#start {
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 70%;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  h1 {
+    align-self: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 8%;
+  }
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4%;
+  margin-right: 4%;
+}
+#theme-toggle {
+  background: none;
+  border: none;
+}
+#theme-icon {
+  color: var(--toggle-color);
+  font-size: 25px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3%;
+  input {
+    margin-bottom: 2%;
+    background-color: var(--bg-color);
+    border-color: var(--text-color);
+  }
+  label {
+    margin-bottom: 1%;
+  }
+}
+#playerColor {
+  background-color: transparent;
+  border: none;
+  width: 8%;
+  font-size: 25px;
+  color: var(--text-color);
+  #option {
+    background-color: var(--bg-color);
+  }
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.scoreTimer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  align-self: center;
+  width: 40%;
+  margin-bottom: 4%;
+}
+
+#startBtn{
+  background-color: transparent;
+  align-self: center;
+  border: none;
+}
+#startIcon {
+  color: var(--text-color);
+  font-size: 40px;
+}
+
+#gameScreen {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#gameCanvas {
+  background-image: var(--bg);
+  background-color: var(--bg-color);
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#info {
+  position: absolute;
+  margin: 1%;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  width: 98%;
+}
+#pauseBtn {
+  background: transparent;
+  border: none;
+}
+#pause {
+  color: var(--text-color);
+  font-size: 25px;
+}
+#pauseScreen {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 10;
+
+  background-color: var(--bg-color);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  width: 40%;
+  height: 50%;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+#continueBtn {
+  background: transparent;
+  border: none;
+}
+#continueIcon {
+  color: var(--text-color);
+  font-size: 40px;
+}
+
+#endScreen {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 10;
+
+  background-color: var(--bg-color);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  width: 40%;
+  height: 50%;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  h1 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.endInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-bottom: 4%;
+}
+.endButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20%;
+}
+#endIcon {
+  color: var(--text-color);
+  font-size: 35px;
+}
+.btn {
+  background: transparent;
+  border: none;
+}
+
+button:hover, 
+#playerColor:hover {
+  transform: scale(1.1);
+}
+#start:hover {
+  transform: scale(1.02);
+}
+#pauseScreen:hover,
+#endScreen:hover {
+  transform: translate(-50%, -50%) scale(1.02);
+}
