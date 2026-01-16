@@ -1,0 +1,16 @@
+:root {
+  --bg: url("../backgrounds/darkTheme.png");
+  --bg-color: #dbceb1;
+  --text-color: #313e52;
+  --shadow: 0px 2px 8px #959a9e;
+  --radius: 20px;
+  --toggle-color: rgb(226, 157, 29);
+}
+
+:root[theme = "dark"] {
+  --bg: url("../backgrounds/lightTheme.png");
+  --bg-color: #313e52;
+  --text-color: #dbceb1;
+  --shadow: 0px 2px 8px rgb(40, 50, 55);
+  --toggle-color: rgb(214, 163, 69);
+}
