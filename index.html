@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lov na krugove</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/svg" href="backgrounds/circle.svg">
+    <!--Luckiest Guy-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="startScreen">
+      <div id="start">
+        <header>
+          <button id="theme-toggle">
+            <i id="theme-icon" class="fa-solid fa-sun"></i>
+          </button>
+        </header>
+
+      <h1>Lov na krugove</h1>
+
+      <div class="inputContainer">
+        <label for="playerName">Your name:</label>
+        <input type="text" id="playerName" maxlength="20">
+
+      <label for="playerColor">Select your skin</label>
+        <select id="playerColor">
+          <option id="option" value="blue">🔵</option>
+          <option id="option" value="green">🟢</option>
+          <option id="option" value="red">🔴</option>
+          <option id="option" value="purple">🟣</option>
+          <option id="option" value="yellow">🟡</option>
+          <option id="option" value="orange">🟠</option>
+        </select>
+      </div>
+
+      <div class="scoreTimer">
+        <p>score: 0</p>
+        <p>timer: 00:00</p>
+      </div>
+      <button id="startBtn"><i id="startIcon" class="fa-solid fa-play"></i></button>
+      </div>
+    </div>
+
+    <div id="gameScreen">
+      <div id="info">
+        <div>
+          Score: <span id="score">0</span> <br>
+          Timer: <span id="timer">0 s</span>
+        </div>
+        <button id="pauseBtn"> <i id="pause" class="fa-solid fa-pause"></i> </button>
+    </div>
+
+      <canvas id="gameCanvas"></canvas>
+
+      <div id="pauseScreen">
+        <h1>Paused</h1>
+        <button id="continueBtn"> <i id="continueIcon" class="fa-solid fa-play"></i> </button>
+      </div>
+
+      <div id="endScreen">
+        <h1>Game over</h1>
+        <div class="endInfo">
+          <span id="finalScore"> </span>
+          <span id="finalTimer"> </span>
+        </div>
+        <div class="endButtons">
+          <button id="restartBtn" class="btn"> <i id="endIcon" class="fa-solid fa-rotate-right"> </i></button>
+          <button id="backToStart" class="btn"> <i id="endIcon" class="fa-solid fa-home"></i> </button>
+        </div>
+      </div>
+    </div>
+    
+    <script type="module" src="./js/game.js"></script>
+  </body>
+</html>
